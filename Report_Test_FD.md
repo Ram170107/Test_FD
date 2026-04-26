@@ -18,7 +18,7 @@
 
  **-y** чтобы на вопрос "да" или "нет" ответ был "да"
 
-![]()
+![](https://github.com/Ram170107/Test_FD/blob/d27ba0aadd21561d9772731a18a373cbd2d9cf7d/screen%20/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20NGINX.png)
 
  Добавим NGINX в автозагрузку
 
