@@ -92,5 +92,10 @@
 
 ![](https://github.com/Ram170107/Test_FD/blob/1f791a6bbef4c7d41262d0a1237514b37a46b4a2/screen%20/%D0%92%D1%85%D0%BE%D0%B4%20%D0%B2%20%D0%91%D0%94%20%D0%B8%20%D1%81%D1%83%D1%89%20%D0%91%D0%94.png)
 
+## Установка PHP
+Установим PHP и популярные расширения:
 
+> sudo apt install php-fpm php-mysql php-curl php-gd php-mbstring php-xml php-zip php-bcmath -y
+
+![](https://github.com/Ram170107/Test_FD/blob/ae6743d2163a16e8a6e7aab8f1604122108c1a07/screen/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0PHP%20%D0%B8%20%D1%80%D0%B0%D1%81%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%B8%D0%B9.png)
 
