@@ -9,5 +9,24 @@
  > sudo apt update
 
  обновил список пакетов.
- Теперь можно установить на нашу систему NGINX командой - **sudo apt install nginx -y**
- -y чтобы на вопрос "да" или "нет" ответ был "да"
+ 
+ Теперь можно установить на нашу систему NGINX командой 
+ 
+ > sudo apt install nginx -y
+
+ **-y** чтобы на вопрос "да" или "нет" ответ был "да"
+
+ Убедимся что NGINX запущен:
+
+ > sudo systemctl status nginx
+
+#### Некоторые команды для работы с NGINX:
+
+    sudo systemctl start nginx — запуск веб-сервера;
+    sudo systemctl restart nginx — перезапуск;
+    sudo systemctl reload nginx — перезагрузка;
+    sudo systemctl stop nginx — отключение;
+    sudo systemctl status nginx — проверка состояния сервера;
+    sudo nginx -t — тестирование конфигурации.
+
+
