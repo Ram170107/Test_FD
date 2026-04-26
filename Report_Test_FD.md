@@ -42,7 +42,9 @@
 
 ##### Также теперь мы можем проверить работу нашего сервера пройдя по ip (79.141.74.140) адресу сервера:
 
-![Здесь мы видим начальную страницу NGINX по умолчанию](https://github.com/Ram170107/Test_FD/blob/1f791a6bbef4c7d41262d0a1237514b37a46b4a2/screen%20/NGINX_%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0.png)
+![](https://github.com/Ram170107/Test_FD/blob/1f791a6bbef4c7d41262d0a1237514b37a46b4a2/screen%20/NGINX_%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0.png)
+
+Здесь мы видим начальную страницу NGINX по умолчанию
 
 #### Далее устанавливаем MariadB командой:
 
@@ -68,7 +70,9 @@
 
 > sudo mariadb-secure-installation
 
-![в одном из пунктов mariadb предалагет поменять пароль](https://github.com/Ram170107/Test_FD/blob/1f791a6bbef4c7d41262d0a1237514b37a46b4a2/screen%20/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%20MariaDB.png)
+![](https://github.com/Ram170107/Test_FD/blob/1f791a6bbef4c7d41262d0a1237514b37a46b4a2/screen%20/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%20MariaDB.png)
+
+в одном из пунктов mariadb предалагет поменять пароль
 
 Далее можем зайти в mariadb:
 
@@ -79,5 +83,6 @@
 > SHOW DATABASE;
 
 ![](https://github.com/Ram170107/Test_FD/blob/1f791a6bbef4c7d41262d0a1237514b37a46b4a2/screen%20/%D0%92%D1%85%D0%BE%D0%B4%20%D0%B2%20%D0%91%D0%94%20%D0%B8%20%D1%81%D1%83%D1%89%20%D0%91%D0%94.png)
+
 
 
