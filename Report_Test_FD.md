@@ -8,7 +8,7 @@
  
  > sudo apt update
 
-![]()
+![](https://github.com/Ram170107/Test_FD/blob/db187c8e5b1b7ec76d566ed73286161ddca7a85a/screen%20/%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%BE%D0%B2.png)
 
  обновил список пакетов.
  
@@ -29,7 +29,7 @@
 
  > sudo systemctl status nginx
 
-![]()
+![](https://github.com/Ram170107/Test_FD/blob/db187c8e5b1b7ec76d566ed73286161ddca7a85a/screen%20/%D0%A1%D1%82%D0%B0%D1%82%D1%83%D1%81%20NGINX.png)
 
 #### Некоторые команды для работы с NGINX:
 
@@ -41,3 +41,5 @@
     sudo nginx -t — тестирование конфигурации.
 
 ![]()
+
+#### Далее устанавливаем MariadB
