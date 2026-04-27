@@ -107,3 +107,14 @@
 
 ![](https://github.com/Ram170107/Test_FD/blob/ae6743d2163a16e8a6e7aab8f1604122108c1a07/screen/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0PHP%20%D0%B8%20%D1%80%D0%B0%D1%81%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%B8%D0%B9.png)
 
+#### Создадим БД:
+
+>
+
+sudo mysql -u root -p -e "CREATE DATABASE my_site_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+sudo mysql -u root -p -e "CREATE USER my_site_user@localhost IDENTIFIED BY 'StrongPassword123!';"
+sudo mysql -u root -p -e "GRANT ALL PRIVILEGES ON my_site_db.* TO 'my_site_user'@'localhost';"
+sudo mysql -u root -p -e "FLUSH PRIVILEGES;"
+sudo mysql -u root -p -e "SHOW DATABASES;"
+
+>
