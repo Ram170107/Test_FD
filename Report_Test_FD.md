@@ -117,3 +117,99 @@ sudo mysql -u root -p -e "FLUSH PRIVILEGES;"
 sudo mysql -u root -p -e "SHOW DATABASES;"
 
 ```
+### Создание PHP сайта:
+
+Cоздать файл
+
+> sudo mkdir -p /var/www/my_site
+
+Переходим в него редактором
+
+> sudo nano /var/www/my_site/index.php
+
+В файл записываем код сайта:
+
+```<?php
+$host = 'localhost';
+$dbname = 'my_site_db';
+$user = 'my_site_user';
+$pass = 'StrongPassword123!';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    // Создаем тестовую таблицу
+    $pdo->exec("CREATE TABLE IF NOT EXISTS test_table (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        message VARCHAR(255) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )");
+    
+    // Добавляем тестовую запись
+    $stmt = $pdo->prepare("INSERT INTO test_table (message) VALUES (?)");
+    $stmt->execute(['Сайт работает и подключен к MariaDB! ' . date('Y-m-d H:i:s')]);
+    
+    // Получаем последние 5 записей
+    $stmt = $pdo->query("SELECT * FROM test_table ORDER BY id DESC LIMIT 5");
+    $records = $stmt->fetchAll();
+    
+    echo "<h1>✅ Веб-сервер NGINX + PHP + MariaDB работает!</h1>";
+    echo "<h2>Записи из базы данных:</h2>";
+    echo "<ul>";
+    foreach ($records as $record) {
+        echo "<li>[{$record['created_at']}] {$record['message']}</li>";
+    }
+    echo "</ul>";
+    echo "<p>PHP Version: " . phpversion() . "</p>";
+    
+} catch(PDOException $e) {
+    echo "<h1>❌ Ошибка подключения к БД</h1>";
+    echo "<p>" . $e->getMessage() . "</p>";
+}
+?>
+
+```
+
+
+![]()
+
+### Настроика виртуального хоста NGINX:
+
+Переходим в файл
+
+> sudo nano /etc/nginx/sites-available/my_site
+
+И вставляем код:
+
+```nginx
+
+server {
+    listen 80;
+    server_name _;
+    root /var/www/my_site;
+    index index.php index.html;
+    
+    location / {
+        try_files $uri $uri/ =404;
+    }
+    
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
+    }
+}
+
+```
+
+#### Активируем сайт:
+
+```sudo ln -s /etc/nginx/sites-available/my_site /etc/nginx/sites-enabled/
+sudo rm /etc/nginx/sites-enabled/default 2>/dev/null
+sudo nginx -t
+sudo systemctl reload nginx
+
+```
+### Теперь можем проверить работу сайта!
+
+![]()
