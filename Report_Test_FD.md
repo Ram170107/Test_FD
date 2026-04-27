@@ -109,12 +109,11 @@
 
 #### Создадим БД:
 
->
 
-sudo mysql -u root -p -e "CREATE DATABASE my_site_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+```sudo mysql -u root -p -e "CREATE DATABASE my_site_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 sudo mysql -u root -p -e "CREATE USER my_site_user@localhost IDENTIFIED BY 'StrongPassword123!';"
 sudo mysql -u root -p -e "GRANT ALL PRIVILEGES ON my_site_db.* TO 'my_site_user'@'localhost';"
 sudo mysql -u root -p -e "FLUSH PRIVILEGES;"
 sudo mysql -u root -p -e "SHOW DATABASES;"
 
->
+```
